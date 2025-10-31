@@ -1,6 +1,6 @@
-# Check8
+# Checkm8
 
-Check8 is an application that allows users to play chess with players with similar skill and request deep analysis of their games (can be imported) with different chess engines.
+Checkm8 is an application that allows users to play chess with players with similar skill and request deep analysis of their games (can be imported) with different chess engines.
 
 ## Architecture
 
