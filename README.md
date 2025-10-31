@@ -1,6 +1,6 @@
 # Checkmate
 
-Checkmate is an application that allows users to play chess and analyze their games.
+Checkmate is an application that allows users to play chess with players with similar skill and request deep analysis of their games (can be imported) with different chess engines.
 
 ## Architecture
 
@@ -16,7 +16,7 @@ It uses microservice architecture.
 - **Matchmaking**
     - ```/seeks```: Seek, Cancel
 - **Gameplay/Games**
-    - ```/games```: Create, Move, Resign, Fetch games, Waiting
+    - ```/games```: Create, Join, Move, Resign, Fetch games, Waiting
 - **Analysis**
     - ```/analyses```: Analyze
 
@@ -38,10 +38,3 @@ It uses microservice architecture.
 ### DBs
 - **Auth/Users -> UsersDB**
 - **Gameplay/Games -> GamesDB**
-
-### Active game logic (long-pooling)
-1. Client: ```GET /games/{id}/events?since={last_seen_event}```
-2. Server: Wait up to 30s for a new event
-    - If a new event arrives -> respond with updated events.
-    - If no event after 30s  -> respond empty
-3. Client: Get response and repeat 1.
