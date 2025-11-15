@@ -38,3 +38,6 @@ It uses microservice architecture.
 ### DBs
 - **Auth/Users -> UsersDB**
 - **Gameplay/Games -> GamesDB**
+
+## CHECKLIST QUEUE
+[checklist_q.md](./readme_assets/checklist_q.md)
