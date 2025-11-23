@@ -38,6 +38,10 @@ It uses microservice architecture.
 ### DBs
 - **Auth/Users -> UsersDB**
 - **Gameplay/Games -> GamesDB**
+- create with:
+    - ```docker build . -t checkm8-postgres```
+    - ```docker create --name checkm8-db -p 5432:5432 checkm8-postgres```
+- start with: ```docker start checkm8-db```
 
 ## CHECKLIST QUEUE
 [checklist_q.md](./readme_assets/checklist_q.md)
