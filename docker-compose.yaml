@@ -1,0 +1,35 @@
+services:
+  gameplay_games:
+    image: checkm8-gameplay_games:latest
+    container_name: checkm8-gameplay_games
+    ports:
+      - "8080:8080"
+    networks:
+      - checkm8-network
+  analysis:
+    image: checkm8-analysis:latest
+    container_name: checkm8-analysis
+    ports:
+      - "8081:8080"
+    networks:
+      - checkm8-network
+  auth_users:
+    image: checkm8-auth_users:latest
+    container_name: checkm8-auth_users
+    ports:
+      - "8082:8080"
+    networks:
+      - checkm8-network
+  matchmaking:
+    image: checkm8-matchmaking:latest
+    container_name: checkm8-matchmaking
+    ports:
+      - "8084:8080"
+    networks:
+      - checkm8-network
+    env_file:
+      - .env
+networks:
+  checkm8-network:
+    name: checkm8-network
+    driver: bridge
