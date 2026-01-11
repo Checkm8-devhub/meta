@@ -43,9 +43,6 @@ It uses microservice architecture.
     - ```docker create --name checkm8-db -p 5432:5432 checkm8-postgres```
 - start with: ```docker start checkm8-db```
 
-## CHECKLIST QUEUE
-[checklist_q.md](./readme_assets/checklist_q.md)
-
 ## USE WITH docker-compose locally
 - ```docker run -p 127.0.0.1:8083:8080 -e KC_BOOTSTRAP_ADMIN_USERNAME=admin -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin --name checkm8_keycloak quay.io/keycloak/keycloak start-dev``` for keycloak + set it up
 - ```docker start checm8-db``` for db
